@@ -64,11 +64,11 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
         {
-          pageLanguage: 'ko',  // 기본 언어 한국어 
-          includedLanguages: 'ko, en', // 번역에 포함될 언어
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
-          multilanguagePage: true
-        },
+            pageLanguage: 'ko', // 기본 언어
+            includedLanguages: 'en,ko,ja',  // 언어 추가 
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+            autoDisplay: false, multilanguagePage: true
+        }, 
         'google_translate_element'
       );
     }
