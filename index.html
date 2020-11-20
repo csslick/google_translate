@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹사이트 번역 API</title>
+  <style>
+    .container {
+      overflow: hidden;
+    }
+
+    /* 번역 버튼 */
+    .goog-te-gadget-simple {
+      float: right;
+    }
+
+    /* 구글 기본 가젯 끔 */
+    iframe.goog-te-banner-frame {
+      display: none !important;
+    }
+
+    body {
+      position: static !important;
+      top: 0px !important;
+    }
+
+    .goog-logo-link {
+      display: none !important;
+    }
+
+    .goog-te-gadget {
+      color: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="google_translate_element">
+    </div>
+
+  </div>
+  <section>
+    <h1>제목</h1>
+    <a href="#">회사소개 |</a>
+    <a href="#">제품소개 |</a>
+    <a href="#">오시는 길 |</a>
+    <a href="#">게시판</a>
+  </section>
+
+  <section>
+    <h2>제품 소개</h2>
+    <ul>
+      <li>디지털 가전</li>
+      <li>모바일 기기</li>
+      <li>영상 장비</li>
+    </ul>
+  </section>
+
+
+  <script type="text/javascript">
+    // 번역 API 설정 및 실행
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'ko',  // 기본 언어 한국어 
+          includedLanguages: 'ko, en', // 번역에 포함될 언어
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
+          multilanguagePage: true
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+
+  <!-- 구글 번역API -->
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+
+</html>
